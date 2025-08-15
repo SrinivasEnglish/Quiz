@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mixed Tense Practice</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; }
+h2 { color: #333; }
+.question { margin-bottom: 15px; }
+input[type=text] { padding: 5px; width: 300px; }
+button { margin-left: 10px; }
+.correct { color: green; }
+.incorrect { color: red; }
+</style>
+<script>
+function checkAnswer(id, correctAnswer) {
+    var userAnswer = document.getElementById('ans'+id).value.trim();
+    var feedback = document.getElementById('feedback'+id);
+    if(userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+        feedback.textContent = "Correct!";
+        feedback.className = "correct";
+    } else {
+        feedback.textContent = "Incorrect!";
+        feedback.className = "incorrect";
+    }
+}
+function showAnswer(id, correctAnswer) {
+    document.getElementById('ans'+id).value = correctAnswer;
+}
+</script>
+</head>
+<body>
+<h2>Mixed Tense Practice – 10 Questions</h2>
+<p>Fill in the blanks with the correct tense form of the verb given in brackets.</p>
+
+<div class='question'>
+    <strong>1. While Ramesh _______ (study) for the exam, his friends arrived.</strong><br>
+    <input type='text' id='ans1'> 
+    <button onclick="checkAnswer(1, 'was studying')">Check</button>
+    <button onclick="showAnswer(1, 'was studying')">Show Answer</button>
+    <span id='feedback1'></span>
+</div>
+
+<div class='question'>
+    <strong>2. Sita _______ (finish) her homework before she went out to play.</strong><br>
+    <input type='text' id='ans2'> 
+    <button onclick="checkAnswer(2, 'had finished')">Check</button>
+    <button onclick="showAnswer(2, 'had finished')">Show Answer</button>
+    <span id='feedback2'></span>
+</div>
+
+<div class='question'>
+    <strong>3. We _______ (play) cricket yesterday evening.</strong><br>
+    <input type='text' id='ans3'> 
+    <button onclick="checkAnswer(3, 'played')">Check</button>
+    <button onclick="showAnswer(3, 'played')">Show Answer</button>
+    <span id='feedback3'></span>
+</div>
+
+<div class='question'>
+    <strong>4. By the time the bus came, we _______ (wait) for over an hour.</strong><br>
+    <input type='text' id='ans4'> 
+    <button onclick="checkAnswer(4, 'had been waiting')">Check</button>
+    <button onclick="showAnswer(4, 'had been waiting')">Show Answer</button>
+    <span id='feedback4'></span>
+</div>
+
+<div class='question'>
+    <strong>5. I _______ (never see) the Taj Mahal before last summer.</strong><br>
+    <input type='text' id='ans5'> 
+    <button onclick="checkAnswer(5, 'had never seen')">Check</button>
+    <button onclick="showAnswer(5, 'had never seen')">Show Answer</button>
+    <span id='feedback5'></span>
+</div>
+
+<div class='question'>
+    <strong>6. When I called, Meena _______ (sleep).</strong><br>
+    <input type='text' id='ans6'> 
+    <button onclick="checkAnswer(6, 'was sleeping')">Check</button>
+    <button onclick="showAnswer(6, 'was sleeping')">Show Answer</button>
+    <span id='feedback6'></span>
+</div>
+
+<div class='question'>
+    <strong>7. They _______ (live) in Hyderabad for five years before moving to Chennai.</strong><br>
+    <input type='text' id='ans7'> 
+    <button onclick="checkAnswer(7, 'had lived')">Check</button>
+    <button onclick="showAnswer(7, 'had lived')">Show Answer</button>
+    <span id='feedback7'></span>
+</div>
+
+<div class='question'>
+    <strong>8. The children _______ (watch) TV when the lights went out.</strong><br>
+    <input type='text' id='ans8'> 
+    <button onclick="checkAnswer(8, 'were watching')">Check</button>
+    <button onclick="showAnswer(8, 'were watching')">Show Answer</button>
+    <span id='feedback8'></span>
+</div>
+
+<div class='question'>
+    <strong>9. Ravi _______ (just finish) his lunch when his friend came.</strong><br>
+    <input type='text' id='ans9'> 
+    <button onclick="checkAnswer(9, 'had just finished')">Check</button>
+    <button onclick="showAnswer(9, 'had just finished')">Show Answer</button>
+    <span id='feedback9'></span>
+</div>
+
+<div class='question'>
+    <strong>10. I _______ (visit) my grandparents last weekend.</strong><br>
+    <input type='text' id='ans10'> 
+    <button onclick="checkAnswer(10, 'visited')">Check</button>
+    <button onclick="showAnswer(10, 'visited')">Show Answer</button>
+    <span id='feedback10'></span>
+</div>
+
+</body>
+</html>
